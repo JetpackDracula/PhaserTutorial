@@ -55,11 +55,13 @@ function create() {
 function update() {
   player.setVelocity(0);
 
-  // Move up/down only
+  // Move up/down only - now adding left/right
   if (cursors.up.isDown || wKey.isDown) player.setVelocityY(-200);
   if (cursors.down.isDown || sKey.isDown) player.setVelocityY(200);
+  if (cursors.left.isDown || aKey.isDown) player.setVelocityX(-200);
+  if (cursors.right.isDown || dKey.isDown) player.setVelocityX(200);
 
-    if (cursors.left.isDown || aKey.isDown) player.setVelocityX(-200);
+  if (cursors.left.isDown || aKey.isDown) player.setVelocityX(-200);
   if (cursors.right.isDown || dKey.isDown) player.setVelocityX(200);
 }
 
